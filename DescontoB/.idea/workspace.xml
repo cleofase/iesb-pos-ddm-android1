@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b011d893-2ee6-45d7-b046-510ff9ffff88" name="Default" comment="" />
+    <list default="true" id="be070300-95f5-4bb4-8e21-b78561b70a72" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Fatorial.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Fatorial.kt">
+      <file leaf-file-name="DescontoB.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DescontoB.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+              <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -39,7 +39,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Fatorial.kt" />
+        <option value="$PROJECT_DIR$/src/DescontoB.kt" />
       </list>
     </option>
   </component>
@@ -64,20 +64,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Fatorial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Fatorial" type="462c0819:PsiDirectoryNode" />
+              <item name="DescontoB" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DescontoB" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -135,16 +135,16 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="FatorialKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="DescontoBKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="FatorialKt" />
+      <option name="MAIN_CLASS_NAME" value="DescontoBKt" />
       <option name="WORKING_DIRECTORY" />
-      <module name="Fatorial" />
+      <module name="DescontoB" />
       <envs />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -189,7 +189,7 @@
     </configuration>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Kotlin.FatorialKt" />
+        <item index="0" class="java.lang.String" itemvalue="Kotlin.DescontoBKt" />
       </list>
     </recent_temporary>
   </component>
@@ -201,11 +201,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b011d893-2ee6-45d7-b046-510ff9ffff88" name="Default" comment="" />
-      <created>1522112026049</created>
+      <changelist id="be070300-95f5-4bb4-8e21-b78561b70a72" name="Default" comment="" />
+      <created>1522117199883</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1522112026049</updated>
+      <updated>1522117199883</updated>
     </task>
     <servers />
   </component>
@@ -249,10 +249,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Fatorial.kt">
+    <entry file="file://$PROJECT_DIR$/src/DescontoB.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
           <folding />
         </state>
       </provider>
