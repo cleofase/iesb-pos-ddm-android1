@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         textViewPercent.setOnClickListener { onCliqueOperation(textViewPercent.text.toString()) }
         textViewResult.setOnClickListener { onCliqueOperation(textViewResult.text.toString()) }
         textViewClear.setOnClickListener { onCliqueOperation(textViewClear.text.toString()) }
-        textViewDel.setOnClickListener { onCliqueKey(textViewDel.text.toString()) }
+        textViewDel.setOnClickListener { onCliqueDel(textViewDel.text.toString()) }
     }
 
     private fun onCliqueKey(symbol: String) {
@@ -64,5 +64,11 @@ class MainActivity : AppCompatActivity() {
         userTouchedDot = false
         calculatorEngine.performOperation(symbol)
         displayValue = calculatorEngine.result
+    }
+
+    private fun onCliqueDel(symbol: String) {
+        if (userIsInMiddleOfTyping) {
+            textViewDisplay.text = if (textViewDisplay.text.toString().length > 1) {textViewDisplay.text.dropLast(1) } else {userIsInMiddleOfTyping = false; "0"}
+        }
     }
 }
