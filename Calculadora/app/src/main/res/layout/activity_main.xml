@@ -77,7 +77,7 @@
         android:layout_margin="1dp"
         android:background="#D0D0D0"
         android:gravity="center_vertical|center_horizontal"
-        android:text=","
+        android:text="."
         android:textColor="#808080"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -7,7 +7,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private var userIsInMiddleOfTyping = false
-    private var userTouchedDot = false
+    private val hasDecimalDot: Boolean
+        get() = textViewDisplay.text.indexOf(".") > 0
     private var calculatorEngine = CalculatorBrain()
     private var displayValue: Double
         get() = textViewDisplay.text.toString().toDouble()
@@ -50,10 +51,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onCliqueDecimalDot(symbol: String) {
-        if (!userTouchedDot) {
+        if (!hasDecimalDot && userIsInMiddleOfTyping) {
             val currentValue = textViewDisplay.text.toString()
-            userTouchedDot = true
-            userIsInMiddleOfTyping = true
             textViewDisplay.text = currentValue + symbol
         }
     }
@@ -61,7 +60,6 @@ class MainActivity : AppCompatActivity() {
     private fun onCliqueOperation(symbol: String) {
         calculatorEngine.setOperand(displayValue)
         userIsInMiddleOfTyping = false
-        userTouchedDot = false
         calculatorEngine.performOperation(symbol)
         displayValue = calculatorEngine.result
     }
