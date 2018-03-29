@@ -21,7 +21,7 @@ class CalculatorBrain {
     private val operations: HashMap<String,Operation> = hashMapOf(
             "+" to Binary({a,b -> a+b}),
             "-" to Binary({a,b -> a-b}),
-            "x" to Binary({a,b -> a*b}),
+            "X" to Binary({a,b -> a*b}),
             "/" to Binary({a,b -> a/b}),
             "%" to Unary({ a -> a/100}),
             "=" to Equals(),
