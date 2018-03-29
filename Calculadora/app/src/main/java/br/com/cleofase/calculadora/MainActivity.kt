@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import java.math.RoundingMode
+import java.text.DecimalFormat
 
 class MainActivity : AppCompatActivity() {
     private var userIsInMiddleOfTyping = false
@@ -13,7 +15,9 @@ class MainActivity : AppCompatActivity() {
     private var displayValue: Double
         get() = textViewDisplay.text.toString().toDouble()
         set(newValue) {
-            textViewDisplay.text = newValue.toString()
+            val valueFormatter = DecimalFormat("#.########")
+            valueFormatter.roundingMode = RoundingMode.CEILING
+            textViewDisplay.text = valueFormatter.format(newValue)
         }
 
     override fun onCreate(savedInstanceState: Bundle?) {
