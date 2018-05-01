@@ -2,6 +2,7 @@ package br.com.cleofase.loja
 
 import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -32,10 +33,15 @@ class CadastroProduto : AppCompatActivity() {
         produto.nome = txtNome.text.toString()
         produto.descricao = txtDescricao.text.toString()
         produto.preco = 0.0f //txtPreco.text.toString().toFloat()
+        produto.naSacola = "false"
 
 
         db!!.romDao().insertProduto(produto)
         Log.d("teste", "O nome do produto é: ${db!!.romDao().produtos().last().nome}")
+        finish()
+
+//        val intent = Intent(this@CadastroProduto,MainActivity::class.java)
+//        startActivity(intent)
 
     }
 
