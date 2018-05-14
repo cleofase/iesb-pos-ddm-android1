@@ -6,14 +6,10 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.View
 import java.lang.Math.PI
-import java.util.*
-import java.util.concurrent.ScheduledExecutorService
-import kotlin.concurrent.fixedRateTimer
 import kotlin.math.absoluteValue
 import kotlin.math.cos
 import kotlin.math.roundToInt
 import kotlin.math.sin
-import kotlin.concurrent.schedule
 
 class Scanner: View {
     constructor(context: Context?) : super(context,null)
@@ -55,6 +51,7 @@ class Scanner: View {
 
         paint.color = Color.GREEN
         paint.style = Paint.Style.STROKE
+        paint.textSize = 20f
 
         drawGridArc(centerBaseScanner, screenRadius, paint, canvas)
 
