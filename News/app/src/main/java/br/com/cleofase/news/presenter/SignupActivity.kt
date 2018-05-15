@@ -1,6 +1,7 @@
 package br.com.cleofase.news.presenter
 
 import android.arch.persistence.room.Room
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -50,6 +51,16 @@ class SignupActivity : AppCompatActivity() {
         newUser.current = 1
         newsDB.userDAO().insertUser(newUser)
 
-        finish()
+        val currentUsers = newsDB.userDAO().currentUsers()
+        if (currentUsers.count() > 0) {
+            val currentUser = currentUsers.first()
+            val intent = Intent(this@SignupActivity, UserNewsActivity::class.java)
+            intent.putExtra("ownerId", currentUser.id)
+            startActivity(intent)
+            finish()
+        } else {
+            Toast.makeText(this, "Falha no cadastro!", Toast.LENGTH_LONG).show()
+            return
+        }
     }
 }

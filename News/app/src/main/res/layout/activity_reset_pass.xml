@@ -8,7 +8,7 @@
     tools:layout_editor_absoluteY="81dp">
 
     <Button
-        android:id="@+id/btn_resetPass"
+        android:id="@+id/btn_rsp_resetPass"
         style="@android:style/Widget.Material.Button.Colored"
         android:layout_width="352dp"
         android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/txt_email"
+        android:id="@+id/txt_rsp_email"
         style="@android:style/Widget.Material.EditText"
         android:layout_width="352dp"
         android:layout_height="wrap_content"
@@ -35,18 +35,18 @@
         android:contentDescription="Email"
         android:ems="10"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/btn_resetPass"
+        app:layout_constraintBottom_toTopOf="@+id/btn_rsp_resetPass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/lbl_email"
+        android:id="@+id/lbl_rsp_email"
         android:layout_width="352dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:text="Email"
-        app:layout_constraintBottom_toTopOf="@+id/txt_email"
+        app:layout_constraintBottom_toTopOf="@+id/txt_rsp_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
