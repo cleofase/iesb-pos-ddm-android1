@@ -17,4 +17,6 @@ public interface NewDAO {
     @Query("SELECT * FROM new WHERE ownerId == :ownerId")
     fun news(ownerId: Int): Array<New>
 
+    @Query("SELECT * FROM new WHERE id == :newId")
+    fun newWithId(newId: Int): New
 }
