@@ -10,5 +10,6 @@ data class User (
         @ColumnInfo(name = "password") var password: String = "",
         @ColumnInfo(name = "enrolling") var enrolling: String = "",
         @ColumnInfo(name = "phone") var phone: String = "",
+        @ColumnInfo(name = "photo") var photo: String = "",
         @ColumnInfo(name = "current") var current: Int = 0
 )

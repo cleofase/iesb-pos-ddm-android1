@@ -19,4 +19,7 @@ public interface UserDAO {
 
     @Query("SELECT * FROM user WHERE current == 1")
     fun currentUsers(): Array<User>
+
+    @Query("SELECT * FROM user WHERE id == :userId")
+    fun userWithId(userId: Int): User
 }

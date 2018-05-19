@@ -47,6 +47,7 @@ class UserNewsActivity : AppCompatActivity() {
 
     private fun goToUserDetailAct() {
         val intent = Intent(this@UserNewsActivity, UserDetailActivity::class.java)
+        intent.putExtra("userId", ownerId)
         startActivity(intent)
     }
 }
