@@ -13,6 +13,7 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.util.Base64
 import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_cadastro_produto.*
 import java.io.ByteArrayOutputStream
 
@@ -30,6 +31,7 @@ class CadastroProduto : AppCompatActivity() {
         db = Room.databaseBuilder(applicationContext,AppDatabase::class.java,"produtos-database").allowMainThreadQueries().build()
 
         btnCadastrar.setOnClickListener({cadastrar()})
+        imageView.isClickable = true
         imageView.setOnClickListener({tryCaptureImage()})
     }
 
@@ -45,8 +47,6 @@ class CadastroProduto : AppCompatActivity() {
     }
 
     private fun tryCaptureImage() {
-        Log.d("Debug","tentando tirar fotos...")
-
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA), REQUEST_PERMISSION)
             return
@@ -70,6 +70,18 @@ class CadastroProduto : AppCompatActivity() {
     }
 
     fun cadastrar() {
+        if (txtNome.text.toString().length == 0) {
+            Toast.makeText(this, "Informe um nome para o produto", Toast.LENGTH_LONG).show()
+            return
+        }
+        if (txtDescricao.text.toString().length == 0) {
+            Toast.makeText(this, "Informe uma descrição para o produto", Toast.LENGTH_LONG).show()
+            return
+        }
+        if (txtPreco.text.toString().length == 0) {
+            Toast.makeText(this, "Informe um preço para o produto", Toast.LENGTH_LONG).show()
+            return
+        }
         var produto = Produto()
         produto.nome = txtNome.text.toString()
         produto.descricao = txtDescricao.text.toString()
@@ -79,7 +91,6 @@ class CadastroProduto : AppCompatActivity() {
 
 
         db!!.romDao().insertProduto(produto)
-        Log.d("teste", "O nome do produto é: ${db!!.romDao().produtos().last().nome}")
         finish()
     }
 

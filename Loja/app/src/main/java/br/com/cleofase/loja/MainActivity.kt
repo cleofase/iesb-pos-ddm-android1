@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         container.removeAllViews()
         for (produto in produtos) {
             Log.d("Debug","Produto: ${produto.nome} imagem: ${produto.foto}")
-            val produtoItem = ItemView(produto.nome, produto.descricao, "R$ ${produto.preco}", produto.naSacola == "true", this)
+            val produtoItem = ItemView(produto.nome, produto.descricao, "R$ ${produto.preco}", produto.foto, produto.naSacola == "true", this)
             produtoItem.setOnClickListener({changeBasketStatus(produto)})
             container.addView(produtoItem)
         }

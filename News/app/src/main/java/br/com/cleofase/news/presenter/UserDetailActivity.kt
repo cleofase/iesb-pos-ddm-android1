@@ -42,6 +42,7 @@ class UserDetailActivity : AppCompatActivity() {
         txt_usd_enrolling.setText(user.enrolling)
         txt_usd_phone.setText(user.phone)
         txt_usd_email.setText(user.email)
+        txt_usd_email.isEnabled = false
 
         val photoData = Base64.decode(user.photo, Base64.DEFAULT)
         val photoBmp = BitmapFactory.decodeByteArray(photoData, 0, photoData.size)
